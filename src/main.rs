@@ -164,7 +164,7 @@ fn main() {
                         y: el[2].parse::<usize>().unwrap_or(0),
                     });
                 }
-                _ => todo!(),
+                _ => {}
             },
             None => todo!(),
         }
