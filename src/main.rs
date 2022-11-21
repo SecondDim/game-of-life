@@ -3,6 +3,11 @@ use std::thread;
 use std::time::Duration;
 
 fn main() {
+    // Enable backtraces unless a RUST_BACKTRACE value has already been explicitly provided.
+    if std::env::var("RUST_BACKTRACE").is_err() {
+        std::env::set_var("RUST_BACKTRACE", "1");
+    }
+    
     let mut world_width: usize = 0;
     let mut world_hight: usize = 0;
 
